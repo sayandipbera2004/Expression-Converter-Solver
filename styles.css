@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9; /* Softer neutral background */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px; /* More space below the header */
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif; /* Secondary font for emphasis */
+    color: #222;
+    font-size: 3rem; /* Larger and more engaging title */
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.converter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+}
+
+.input-section, .select-section {
+    margin-bottom: 20px; /* Increased margin */
+    width: 100%;
+    max-width: 500px;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #3BAFDA; /* Softer blue for focus */
+    box-shadow: 0 0 8px rgba(59, 175, 218, 0.4); 
+}
+
+button {
+    padding: 15px 25px;
+    margin: 12px 8px;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #3BAFDA, #3ACF79); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px); /* Adds a dynamic hover effect */
+    background: linear-gradient(135deg, #35AFC8, #32B96A); /* Darker on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deepened shadow */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.output {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+#stepsTable, #evalStepsTable {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 14px;
+    text-align: left;
+    border-radius: 5px; /* Softer edges for cells */
+}
+
+th {
+    background: #3ACF79;
+    color: white;
+    font-size: 1.2rem;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f1f1f1; /* Alternating row colors */
+}
+
+td:hover {
+    background-color: #e2f0f9; /* Soft hover effect */
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px; /* More space above the footer */
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+#conversionResult, #evaluationResult {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .input-section, .select-section {
+        max-width: 100%;
+    }
+
+    #stepsTable, #evalStepsTable {
+        width: 100%;
+    }
+}

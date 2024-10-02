@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Converter and Evaluator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expression Converter & Solver</h1>
+        </header>
+        <input type="text" id="expression" placeholder="Enter expression" />
+        <select id="conversion">
+            <option value="infixToPostfix">Infix to Postfix</option>
+            <option value="infixToPrefix">Infix to Prefix</option>
+            <option value="prefixToInfix">Prefix to Infix</option>
+            <option value="prefixToPostfix">Prefix to Postfix</option>
+            <option value="postfixToInfix">Postfix to Infix</option>
+            <option value="postfixToPrefix">Postfix to Prefix</option>
+            <option value="evaluateInfix">Evaluate Infix</option>
+            <option value="evaluatePrefix">Evaluate Prefix</option>
+            <option value="evaluatePostfix">Evaluate Postfix</option>
+        </select>
+        <button id="convertBtn">Convert</button>
+        <button id="solveBtn" >Solve</button>
+        <button id="clearAllBtn">Clear All</button> <!-- Clear All Button -->
+        
+        <h2>Conversion Result</h2>
+        <div id="conversionResult"></div>
+
+        <h2>Evaluation Result</h2>
+        <div id="evaluationResult"></div>
+
+        <h2>Steps</h2>
+        <table id="stepsTable">
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Operation</th>
+                    <th>Stack</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Evaluation Steps</h2>
+        <table id="evalStepsTable">
+            <thead>
+                <tr>
+                    <th>Step</th>
+                    <th>Operation</th>
+                    <th>Stack</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <footer>
+            <p>Made by Sayandip Bera</p>
+        </footer>
+        <script src="script.js"></script>
+
+    </div>
+</body>
+</html>
