@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const convertBtn = document.getElementById('convertBtn');
     const solveBtn = document.getElementById('solveBtn');
-    const clearBtn = document.getElementById('clearAllBtn');
+    const clearAllBtn = document.getElementById('clearAllBtn');
     const conversionResult = document.getElementById('conversionResult');
     const evaluationResult = document.getElementById('evaluationResult');
     const stepsTableBody = document.querySelector('#stepsTable tbody');
@@ -154,24 +154,58 @@ document.addEventListener('DOMContentLoaded', () => {
             row.insertCell(2).innerText = step.stack;
         });   
     }
-    function clearAll() {
-        clearOutputs();
-        clearEvaluation();
-        clearSteps();
+    // function clearAll() {
+    //     clearOutputs();
+    //     clearEvaluation();
+    //     clearSteps();
+    //     clearEvaluationTable();
+    // }
+    // function clearEvaluationTable(){
+    //     evalStepsTableBody.innerHTML = '';
+    // }
+    // function clearOutputs() {
+    //     conversionResult.innerText = '';
+    //     evaluationResult.innerText = '';
+    //     clearSteps();
+    // }
+   
+    // function clearEvaluation() {
+    //     evaluationResult.innerText = '';
+    // }
+
+    // function clearSteps() {
+    //     stepsTableBody.innerHTML = '';
+    // }
+    function clearInputField() {
+        document.getElementById('expression').value = '';
     }
-    function clearOutputs() {
+
+    function clearAllOutputs() {
         conversionResult.innerText = '';
         evaluationResult.innerText = '';
         clearSteps();
     }
-   
-    function clearEvaluation() {
-        evaluationResult.innerText = '';
+
+    function clearEvaluationTable() {
+        evalStepsTableBody.innerHTML = '';
     }
 
     function clearSteps() {
         stepsTableBody.innerHTML = '';
     }
+
+    function clearEvaluation() {
+        evaluationResult.innerText = '';
+    }
+
+    function clearAll() {
+        clearInputField();            // Clear the input field
+        clearAllOutputs();           // Clear conversion and evaluation outputs
+        clearEvaluation();           // Clear evaluation results
+        clearSteps();                // Clear conversion steps
+        clearEvaluationTable();       // Clear evaluation steps table
+    }
+
     function isValidExpression(expression, conversionType) {
         if (!expression) return false;
 
